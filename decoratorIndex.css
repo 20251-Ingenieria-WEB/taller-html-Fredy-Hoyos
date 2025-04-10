@@ -1,0 +1,157 @@
+
+/* Estilos de fondo --------------------------------------------------------------*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("Imagenes/image.png"); /* Cambia por tu ruta real */
+    background-size: cover;                 /* Que cubra toda la pantalla */
+    background-position: center;           /* Centrada */
+    background-repeat: no-repeat;          /* Sin repetir */
+    background-attachment: fixed;          /*Esto fija la imagen al fondo */
+}
+
+/* Estilos generales --------------------------------------------------------------*/
+main > section:not(:last-of-type) {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Estilos para el encabezado --------------------------------------------------------------*/  
+nav {
+    background-color: lightseagreen; /* Color de fondo verde */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+nav ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin espaciado interno */
+    margin: 0; /* Sin margen */
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: space-around; /* Espacio uniforme entre los elementos */
+}
+
+
+nav ul li a{
+    text-decoration: none; /* Sin subrayado */
+    color: blue;
+    font-size: 25px; /* Tamaño de fuente */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; /* Texto en negrita */
+}	
+
+nav ul li a:hover {
+    color: white; /* Cambia el color al pasar el ratón */
+    font-weight: bold; /* Texto en negrita */
+}
+
+nav ul li a.active {
+    color: white;
+    background-color: darkblue;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+
+/* Estilos para el buscador --------------------------------------------------------------*/
+.buscadorItenms{
+    padding: 10px; /* Espaciado interno */
+    background-color: white; /* Color de fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    display: flex;
+    justify-content: center;
+    flex-direction: fle;
+    margin: 20px; 
+    max-width: 100%;
+    
+}
+
+
+/* Estilos para el formulario --------------------------------------------------------------*/
+input {
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+
+/* Estilos para el botón --------------------------------------------------------------*/
+button {
+    background-color: lightseagreen; /* Color de fondo verde */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+button:hover {
+    background-color: darkgreen; /* Color de fondo más oscuro al pasar el ratón */
+    color: white; /* Texto blanco */
+    transform: matrix(1.02, 0, 0, 1.1, 0, 0); /* Efecto de zoom al pasar el ratón */
+}
+
+button:active {
+    background-color: lightyellow;
+  }
+  
+
+/* Estilos para el contenedor de resultados --------------------------------------------------------------*/
+.Resultado {
+    margin: 30px; /* Espacio inferior */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Múltiples columnas responsivas */
+    justify-items: center; /* Centrar los elementos dentro de cada celda */
+    gap: 20px; /* Espacio entre los elementos */
+
+}
+
+img {
+    width: 130px; /* Ancho fijo */
+    height: 130px; /* Alto fijo */
+}
+
+/* Estilos para las tarjetas--------------------------------------------------------------*/
+.card {
+    background-color: aquamarine;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    width: 220px;  /* Ancho fijo */
+    height: 280px; /* Alto fijo */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Colocar los elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+
+.card h2, 
+.card p {
+    margin: 5px 0; /* Espaciado uniforme */
+}
+
+.card:hover  {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    transition: transform 0.2s; /* Transición suave */
+}
+
+/* Estilos para el pie de página --------------------------------------------------------------*/
+footer {
+    bottom: 0; /* Alineado al fondo */
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem; /* Espaciado interno */
+  }
+footer p {
+    margin: 0; /* Sin margen */
+    color: white; /* Texto blanco */
+}
