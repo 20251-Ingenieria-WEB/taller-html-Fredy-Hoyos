@@ -1,9 +1,14 @@
+
+// Este script se encarga de manejar la interacción con la API de Pokémon y mostrar la información en la página web
+// Se utiliza la API de Pokémon para obtener información sobre un Pokémon específico o varios Pokémon a la vez
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("consultar").addEventListener("click", consultarPokemon);
-    document.getElementById("consultarCantidad").addEventListener("click", consultarMultiplesPokemon);
+    document.getElementById("consultarCantidad").addEventListener("click", consultarVariosPokemones); 
 });
 
 
+// Función para consultar un Pokémon por nombre
+// Se obtiene el nombre del Pokémon desde el input y se hace una consulta a la API de Pokémon
 
 function consultarPokemon() {
     const nombre = document.getElementById("nombreInput").value.trim().toLowerCase();
@@ -22,6 +27,8 @@ function consultarPokemon() {
         });
 }
 
+// Función para mostrar la información del Pokémon
+// Se utiliza un template para mostrar la información del Pokémon en el contenedor especificado
 
 function mostrarPokemon(data, contenedorId) {
     const template = document.getElementById("pokemon-template").content.cloneNode(true);
@@ -38,7 +45,12 @@ function mostrarPokemon(data, contenedorId) {
     contenedor.appendChild(template);
 }
 
-document.getElementById("consultarCantidad").addEventListener("click", function () {
+
+
+// Función para consultar varios Pokémon
+// Se obtiene la cantidad de Pokémon a consultar desde el input
+
+function consultarVariosPokemones() {
     const cantidad = document.getElementById("cantidadInput").value.trim();
     if (isNaN(cantidad) || cantidad <= 0) {
         document.getElementById("CantidadInfo").textContent = "Por favor, ingresa un número válido.";
@@ -62,8 +74,10 @@ document.getElementById("consultarCantidad").addEventListener("click", function 
         .catch(error => {
             document.getElementById("CantidadInfo").textContent = "Por favor verifique la entrada";
         });
-});
+};
 
+// Función para mostrar varios Pokémon
+// Se utiliza un template para mostrar la información de cada Pokémon en el contenedor especificado
 function mostrarPokemones(pokemones) {
     const contenedor = document.getElementById("CantidadInfo");
     contenedor.innerHTML = ""; 

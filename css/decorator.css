@@ -5,13 +5,22 @@ html, body {
     margin: 0;
     padding: 0;
 }
-body{
+.bodyPokemon{
     background-image: url("../Imagenes/image.png"); /* Cambia por tu ruta real */
     background-size: cover;                 /* Que cubra toda la pantalla */
     background-position: center;           /* Centrada */
     background-repeat: no-repeat;          /* Sin repetir */
     background-attachment: fixed;          /*Esto fija la imagen al fondo */
 }
+
+.bodyDog{
+    background-image: url("../Imagenes/fondoPerro.jpg"); /* Cambia por tu ruta real */
+    background-size: cover;                 /* Que cubra toda la pantalla */
+    background-position: center;           /* Centrada */
+    background-repeat: no-repeat;          /* Sin repetir */
+    background-attachment: fixed;          /*Esto fija la imagen al fondo */
+}
+
 
 /* Estilos generales --------------------------------------------------------------*/
 main > section:not(:last-of-type) {
@@ -23,7 +32,7 @@ main > section:not(:last-of-type) {
 /* Estilos para el encabezado --------------------------------------------------------------*/  
 nav {
     background-color: lightseagreen; /* Color de fondo verde */
-    padding: 30px; /* Espaciado interno */
+    padding: 12px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
     margin-bottom: 20px; /* Espacio inferior */
 }
@@ -34,6 +43,15 @@ nav ul {
     margin: 0; /* Sin margen */
     display: flex; /* Usar flexbox para alinear horizontalmente */
     justify-content: space-around; /* Espacio uniforme entre los elementos */
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos */
+    }
+    
 }
 
 
@@ -52,7 +70,7 @@ nav ul li a:hover {
 
 nav ul li a.active {
     color: white;
-    background-color: darkblue;
+    background-color: rgb(19, 96, 168);
     padding: 5px 10px;
     border-radius: 10px;
 }
@@ -61,7 +79,7 @@ nav ul li a.active {
 /* Estilos para el buscador --------------------------------------------------------------*/
 .buscadorItenms{
     padding: 10px; /* Espaciado interno */
-    background-color: white; /* Color de fondo blanco */
+    background-color: rgba(255, 255, 255, 0.5); /* Blanco con 50% de opacidad */
     border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
     display: flex;
@@ -117,26 +135,41 @@ img {
     height: 130px; /* Alto fijo */
 }
 
-/* Estilos para las tarjetas--------------------------------------------------------------*/
-.card {
+.perro-img {
+    width: 200px; /* Ancho fijo */
+    height: 200px; /* Alto fijo */
+}
+
+/* Estilos para las tarjetas de pokemones--------------------------------------------------------------*/
+.cardPokemon {
     background-color: aquamarine;
     border-radius: 10px; /* Bordes redondeados */
     padding: 20px; /* Espaciado interno */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
     width: 220px;  /* Ancho fijo */
-    height: 280px; /* Alto fijo */
+    height: 290px; /* Alto fijo */
     display: flex; /* Usar flexbox para centrar el contenido */
     flex-direction: column; /* Colocar los elementos en columna */
     align-items: center; /* Centrar horizontalmente */
 }
 
+/* Estilos para las tarjetas de perros--------------------------------------------------------------*/
+.cardDog {
+    background-color: rgb(120, 233, 148);
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Colocar los elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
 
-.card h2, 
-.card p {
+.cacardPokemon h2, 
+.cardPokemon p {
     margin: 5px 0; /* Espaciado uniforme */
 }
 
-.card:hover  {
+.cardPokemon:hover  {
     transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
     transition: transform 0.2s; /* Transición suave */
 }
