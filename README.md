@@ -42,11 +42,11 @@ Asegúrate de tener un navegador web moderno instalado (como Chrome, Firefox, Sa
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone [https://github.com/tu-usuario/tu-proyecto.git](https://github.com/tu-usuario/tu-proyecto.git)
+    git clone [https://github.com/20251-Ingenieria-WEB/taller-html-Fredy-Hoyos.git](https://github.com/20251-Ingenieria-WEB/taller-html-Fredy-Hoyos.git)
     ```
 2.  **Navega al directorio del proyecto:**
     ```bash
-    cd tu-proyecto
+    cd taller-html-Fredy-Hoyos
     ```
 3.  **Abre los archivos HTML en tu navegador:** Simplemente abre los archivos `pokemon.html` y `dog.html` con tu navegador web.
 
@@ -94,8 +94,8 @@ La aplicación cuenta con dos páginas principales:
 
 ## Contacto
 
-Tu Nombre
-[Dirección de correo electrónico](frediicardenas1234@gmail.com)
+Jhon Fredy Hoyos Cardenas
+frediicardenas1234@gmail.com
 [Perfil de GitHub](https://github.com/FredyHoyos)
 [Cuenta de Linkedin](https://www.linkedin.com/in/fredy-c%C3%A1rdenas-a4072731a/)
 
