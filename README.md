@@ -42,7 +42,7 @@ Asegúrate de tener un navegador web moderno instalado (como Chrome, Firefox, Sa
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone [https://github.com/20251-Ingenieria-WEB/taller-html-Fredy-Hoyos.git](https://github.com/20251-Ingenieria-WEB/taller-html-Fredy-Hoyos.git)
+    git clone https://github.com/20251-Ingenieria-WEB/taller-html-Fredy-Hoyos.git
     ```
 2.  **Navega al directorio del proyecto:**
     ```bash
