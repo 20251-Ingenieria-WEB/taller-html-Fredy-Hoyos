@@ -131,8 +131,7 @@ button:active {
 }
 
 img {
-    width: 130px; /* Ancho fijo */
-    height: 130px; /* Alto fijo */
+    object-fit: cover; /* Ajustar la imagen al contenedor */
 }
 
 .perro-img {

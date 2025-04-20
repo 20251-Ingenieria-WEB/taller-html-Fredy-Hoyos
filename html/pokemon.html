@@ -1,68 +1,97 @@
 <!DOCTYPE html>
+<!-- Define el tipo de documento como HTML5 -->
 <html lang="es">
 <head>
+    <!-- Codificación de caracteres -->
     <meta charset="UTF-8">
+    <!-- Escalado responsivo para dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>Consulta de Pokémon</title>
+    <!-- Enlace a la hoja de estilos externa -->
     <link rel="stylesheet" href="../css/decorator.css">
+    <!-- Enlace al script de JavaScript, con defer para ejecutarse después de que se cargue el HTML -->
     <script src="../scripts/jspokemon.js" defer></script>
 </head>
+
+<!-- Cuerpo del documento con clase personalizada -->
 <body class="bodyPokemon"> 
+
+    <!-- Sección de navegación entre páginas -->
     <section>
         <nav>
            <ul>
-                <li><a href="pokemon.html"  class="active">Pokemones</a></li>
-                <li><a href="rick.html">Rick and Morty</a></li>
+                <!-- Enlace a la página actual (Pokemones), con clase activa -->
+                <li><a href="pokemon.html" class="active">Pokemones</a></li>
+                <!-- Enlace a la página de consulta de perros -->
                 <li><a href="dog.html">Dogs</a></li>
             </ul> 
         </nav>
     </section>
 
+    <!-- Encabezado principal de la página -->
     <header>
         <h1>Consulta de Pokémon</h1>
     </header>
 
+    <!-- Contenido principal -->
     <main>
+        <!-- Sección para buscar un pokémon por nombre -->
         <section class="buscadorItenms">
             <div>              
-                <h2>Buscar pokémon por nombre </h2>
+                <h2>Buscar pokémon por nombre</h2>
+                <!-- Campo de texto para escribir el nombre del pokémon -->
                 <input type="text" id="nombreInput" placeholder="Nombre del Pokémon" required>
+                <!-- Botón que ejecuta la búsqueda por nombre -->
                 <button id="consultar">Consultar</button>
             </div>
         </section>
 
+        <!-- Sección donde se mostrarán los datos del pokémon consultado -->
         <section class="tarjetas">
             <div id="resultado">
-                <div  class= "Resultado " id="pokemonInfo"></div>
+                <!-- Contenedor dinámico para insertar los datos del pokémon -->
+                <div class="Resultado" id="pokemonInfo"></div>
             </div>
         </section>
 
+        <!-- Sección para consultar varios pokémones al mismo tiempo -->
         <section class="buscadorItenms">
             <div>              
-                <h2>Buscar varios pokémones </h2>
+                <h2>Buscar varios pokémones</h2>
+                <!-- Campo numérico para indicar cuántos pokémones se quieren consultar -->
                 <input type="number" id="cantidadInput" placeholder="Cantidad a mostrar" required>
+                <!-- Botón que ejecuta la búsqueda por cantidad -->
                 <button id="consultarCantidad">Consultar</button>
             </div>
         </section>
 
+        <!-- Sección donde se mostrarán múltiples resultados -->
         <section class="tarjetas">
             <div id="CantidadResultado">
-                <div class= "Resultado " id="CantidadInfo"></div>
+                <!-- Contenedor dinámico donde se insertarán las tarjetas de los pokémones -->
+                <div class="Resultado" id="CantidadInfo"></div>
             </div>
         </section>
     </main>
 
+    <!-- Pie de página con mensaje de derechos -->
     <footer>
         <p>&copy; 2025 Mi primer consumo de API</p>
     </footer>
 
-    <!-- Template para mostrar los datos -->
+    <!-- Plantilla HTML que se usará para generar dinámicamente las tarjetas de los pokémones -->
     <template id="pokemon-template">
         <div class="cardPokemon">
+            <!-- Imagen del pokémon -->
             <img class="pokemon-img" src="" alt="">
+            <!-- Nombre del pokémon -->
             <h2 class="pokemon-nombre"></h2>
+            <!-- Altura del pokémon -->
             <p class="pokemon-altura"></p>
+            <!-- Peso del pokémon -->
             <p class="pokemon-peso"></p>
+            <!-- Habilidades del pokémon -->
             <p class="pokemon-habilidades"></p>
         </div>
     </template>
